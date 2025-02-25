@@ -640,49 +640,54 @@ pub enum ClientCommand {
         /// Number of initial (aka "root") chains to create in addition to the admin chain.
         num_other_initial_chains: u32,
 
+        /// Configure the resource control policy (notably fees) according to pre-defined
+        /// settings.
+        #[arg(long, default_value = "default")]
+        policy_config: ResourceControlPolicyConfig,
+
         /// Set the base price for creating a block.
-        #[arg(long, default_value = "0")]
-        block_price: Amount,
+        #[arg(long)]
+        block_price: Option<Amount>,
 
         /// Set the price per unit of fuel.
-        #[arg(long, default_value = "0")]
-        fuel_unit_price: Amount,
+        #[arg(long)]
+        fuel_unit_price: Option<Amount>,
 
         /// Set the price per read operation.
-        #[arg(long, default_value = "0")]
-        read_operation_price: Amount,
+        #[arg(long)]
+        read_operation_price: Option<Amount>,
 
         /// Set the price per write operation.
-        #[arg(long, default_value = "0")]
-        write_operation_price: Amount,
+        #[arg(long)]
+        write_operation_price: Option<Amount>,
 
         /// Set the price per byte read.
-        #[arg(long, default_value = "0")]
-        byte_read_price: Amount,
+        #[arg(long)]
+        byte_read_price: Option<Amount>,
 
         /// Set the price per byte written.
-        #[arg(long, default_value = "0")]
-        byte_written_price: Amount,
+        #[arg(long)]
+        byte_written_price: Option<Amount>,
 
         /// Set the price per byte stored.
-        #[arg(long, default_value = "0")]
-        byte_stored_price: Amount,
+        #[arg(long)]
+        byte_stored_price: Option<Amount>,
 
         /// Set the base price of sending an operation from a block..
-        #[arg(long, default_value = "0")]
-        operation_price: Amount,
+        #[arg(long)]
+        operation_price: Option<Amount>,
 
         /// Set the additional price for each byte in the argument of a user operation.
-        #[arg(long, default_value = "0")]
-        operation_byte_price: Amount,
+        #[arg(long)]
+        operation_byte_price: Option<Amount>,
 
         /// Set the base price of sending a message from a block..
-        #[arg(long, default_value = "0")]
-        message_price: Amount,
+        #[arg(long)]
+        message_price: Option<Amount>,
 
         /// Set the additional price for each byte in the argument of a user message.
-        #[arg(long, default_value = "0")]
-        message_byte_price: Amount,
+        #[arg(long)]
+        message_byte_price: Option<Amount>,
 
         /// Set the maximum amount of fuel per block.
         #[arg(long)]

@@ -491,39 +491,23 @@ Create genesis configuration for a Linera deployment. Create initial user chains
 
   Default value: `0`
 * `--start-timestamp <START_TIMESTAMP>` — The start timestamp: no blocks can be created before this time
+* `--policy-config <POLICY_CONFIG>` — Configure the resource control policy (notably fees) according to pre-defined settings
+
+  Default value: `default`
+
+  Possible values: `default`, `only-fuel`, `fuel-and-block`, `all-categories`, `devnet`
+
 * `--block-price <BLOCK_PRICE>` — Set the base price for creating a block
-
-  Default value: `0`
 * `--fuel-unit-price <FUEL_UNIT_PRICE>` — Set the price per unit of fuel
-
-  Default value: `0`
 * `--read-operation-price <READ_OPERATION_PRICE>` — Set the price per read operation
-
-  Default value: `0`
 * `--write-operation-price <WRITE_OPERATION_PRICE>` — Set the price per write operation
-
-  Default value: `0`
 * `--byte-read-price <BYTE_READ_PRICE>` — Set the price per byte read
-
-  Default value: `0`
 * `--byte-written-price <BYTE_WRITTEN_PRICE>` — Set the price per byte written
-
-  Default value: `0`
 * `--byte-stored-price <BYTE_STORED_PRICE>` — Set the price per byte stored
-
-  Default value: `0`
 * `--operation-price <OPERATION_PRICE>` — Set the base price of sending an operation from a block..
-
-  Default value: `0`
 * `--operation-byte-price <OPERATION_BYTE_PRICE>` — Set the additional price for each byte in the argument of a user operation
-
-  Default value: `0`
 * `--message-price <MESSAGE_PRICE>` — Set the base price of sending a message from a block..
-
-  Default value: `0`
 * `--message-byte-price <MESSAGE_BYTE_PRICE>` — Set the additional price for each byte in the argument of a user message
-
-  Default value: `0`
 * `--maximum-fuel-per-block <MAXIMUM_FUEL_PER_BLOCK>` — Set the maximum amount of fuel per block
 * `--maximum-executed-block-size <MAXIMUM_EXECUTED_BLOCK_SIZE>` — Set the maximum size of an executed block
 * `--maximum-bytecode-size <MAXIMUM_BYTECODE_SIZE>` — Set the maximum size of decompressed contract or service bytecode, in bytes
