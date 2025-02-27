@@ -58,7 +58,8 @@ from low to high levels in the dependency graph)
   corresponding procedural macros are implemented in `linera-sdk-derive`.
 
 * [`examples`](./examples) Examples of Linera applications written in Rust.
-
+  git commit
+  
 
 ## Quickstart with the Linera CLI tool
 
